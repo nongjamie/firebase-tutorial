@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to Firebase</h1>
+
+    <!-- Authentication demo -->
+    <h1>Authentication</h1>
+    <pre id="auth-info"></pre>
+    <input type="text" placeholder="email" id="email">
+    <input type="text" placeholder="password" id="password">
+    <br>
+    <button onclick="createUser()">Create user</button>
+    <button onclick="loginWithEmail()">Login</button>
+    <br>
+    <button onclick="loginWithGoogle()">Login with Google</button>
+    <br>
+    <button onclick="loginWithFacebook()">Login with Facebook</button>
+    <br>
+    <button onclick="logout()">Logout</button>
+    <hr>
+
+    <!-- Realtime database demo -->
+    <h1>Realtime database</h1>
+    <pre id="realtime-data"></pre>
+    <button onclick="setData()">set</button>
+    <button onclick="updateData()">update</button>
+    <button onclick="pushData()">push</button>
+    <button onclick="removeData()">remove</button>
+
+    <hr>
+
+    <!-- Cloud storage demo -->
+    <h1>Cloud storage</h1>
+    <h3 id="progress"></h3>
+    <div id="file-list"></div>
+    <input id="input-file" type="file" onchange="addFile()">
+    <br>
+    <button onclick="uploadFile()">upload</button>
+    <button onclick="pause()">pause</button>
+    <button onclick="resume()">resume</button>
+    <button onclick="cancel()">cancel</button>
+
+    <!-- Firebase installation -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyANOXnODT0OWy9Jh6R_bTEFbTZz0RP1FiM",
+        authDomain: "fir-tutorial-2732b.firebaseapp.com",
+        databaseURL: "https://fir-tutorial-2732b.firebaseio.com",
+        projectId: "fir-tutorial-2732b",
+        storageBucket: "fir-tutorial-2732b.appspot.com",
+        messagingSenderId: "605136543191"
+    };
+    firebase.initializeApp(config);
+    </script>
+
+    <!-- Link with databse script -->
+    <script src="database.js"></script>
+
+     <!-- Link with storage script -->
+    <script src="storage.js"></script>
+
+
+    <script src="auth.js"></script>
+</body>
+</html>
